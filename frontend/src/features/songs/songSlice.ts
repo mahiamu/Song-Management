@@ -16,7 +16,7 @@ const initialStatistics: Statistics = {
 
 export const fetchSongs = createAsyncThunk('songs/fetchSongs', async () => {
   const response = await axiosInstance.get('/api/songs');
-  console.log('Fetched songs:', response.data); // Add this line to log fetched songs
+  console.log('Fetched songs:', response.data); 
   return response.data;
 });
 
@@ -100,7 +100,7 @@ const songSlice = createSlice({
     builder
       .addCase(fetchSongs.pending, (state) => {
         state.loading = true;
-        state.error = null; // Clear previous errors when starting a new request
+        state.error = null; 
       })
       .addCase(fetchSongs.fulfilled, (state, action: PayloadAction<Song[]>) => {
         state.loading = false;
