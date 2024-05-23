@@ -13,7 +13,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 
 interface SongCardProps {
   song: {
-    _id: string; // Update to use _id
+    _id: string; 
     title: string;
     artist: string;
     album: string;
