@@ -28,14 +28,6 @@ const SongCard: React.FC<SongCardProps> = ({ song, onEdit, onDelete }) => {
   
   return (
     <Card sx={{ maxWidth: 345, margin: 'auto', padding: 2 }}>
-      {song.imageUrl && (
-        <CardMedia
-          component="img"
-          height="140"
-          image={song.imageUrl}
-          alt={`${song.title} album cover`}
-        />
-      )}
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
           {song.title}
